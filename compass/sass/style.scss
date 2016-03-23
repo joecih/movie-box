@@ -1,4 +1,8 @@
-
+html, body {
+    margin: 0;
+    height: 99%;
+    overflow: hidden;
+}
 .container {
     width: 100%;
     height: 99%;
@@ -19,7 +23,7 @@ h4 {
     text-align: center;
 }
 .movie-content {
-    padding-top: 140px;
+    padding-top: 200px;
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -35,8 +39,17 @@ h4 {
 .w3-padding {
     padding: 2px !important;
 }
-html, body {
-    margin: 0;
-    height: 99%;
-    overflow: hidden;
+.search-bar {
+    position: relative;
+    padding: 10px;
+}
+.selections {
+    position: absolute;
+    top: 30%;
+    right: 2%;
+    width: 100px;
+    box-shadow: 1px 1px 5px black;
+}
+#search-btn {
+    min-width: 120px;
 }

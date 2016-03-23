@@ -1,58 +1,78 @@
-/* line 2, ../compass/sass/style.scss */
+/* line 1, ../compass/sass/style.scss */
+html, body {
+  margin: 0;
+  height: 99%;
+  overflow: hidden;
+}
+
+/* line 6, ../compass/sass/style.scss */
 .container {
   width: 100%;
   height: 99%;
   overflow: hidden;
 }
 
-/* line 8, ../compass/sass/style.scss */
+/* line 12, ../compass/sass/style.scss */
 ul {
   list-style-type: none;
 }
 
-/* line 11, ../compass/sass/style.scss */
+/* line 15, ../compass/sass/style.scss */
 h1 {
   text-align: center;
   font-size: 48px;
 }
 
-/* line 15, ../compass/sass/style.scss */
+/* line 19, ../compass/sass/style.scss */
 h4 {
   font-size: 12px;
 }
 
-/* line 18, ../compass/sass/style.scss */
+/* line 22, ../compass/sass/style.scss */
 .movie {
   text-align: center;
 }
 
-/* line 21, ../compass/sass/style.scss */
+/* line 25, ../compass/sass/style.scss */
 .movie-content {
-  padding-top: 140px;
+  padding-top: 200px;
   width: 100%;
   height: 100%;
   overflow: auto;
   padding-right: -5px;
 }
 
-/* line 28, ../compass/sass/style.scss */
+/* line 32, ../compass/sass/style.scss */
 .cards {
   height: 60px;
 }
 
-/* line 32, ../compass/sass/style.scss */
+/* line 36, ../compass/sass/style.scss */
 .movie-images {
   box-shadow: 1px 1px 6px black;
 }
 
-/* line 35, ../compass/sass/style.scss */
+/* line 39, ../compass/sass/style.scss */
 .w3-padding {
   padding: 2px !important;
 }
 
-/* line 38, ../compass/sass/style.scss */
-html, body {
-  margin: 0;
-  height: 99%;
-  overflow: hidden;
+/* line 42, ../compass/sass/style.scss */
+.search-bar {
+  position: relative;
+  padding: 10px;
+}
+
+/* line 46, ../compass/sass/style.scss */
+.selections {
+  position: absolute;
+  top: 30%;
+  right: 2%;
+  width: 100px;
+  box-shadow: 1px 1px 5px black;
+}
+
+/* line 53, ../compass/sass/style.scss */
+#search-btn {
+  min-width: 120px;
 }

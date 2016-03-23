@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    
     $('#movie-search-form').submit(function() {
 
         var movieSearchTerm = $('#movieInput').val();
@@ -10,15 +11,14 @@ $(document).ready(function() {
 
         // var searchURL =
         // 	'http://api.themoviedb.org/3/search/movie/now_playing?query='+movieSearchTerm+'&api_key=24f6a4a3dd56153bb0f7f696f167fc5b';
+        
         $.getJSON(_configureURL, function(_configData) {
-            console.log(_configData);
+            //console.log(_configData);
             _imagePath = _configData.images.base_url;
-            //console.log(_imagePath);
-
         });
 
         $.getJSON(_nowPlaying, function(movieData) {
-            console.log(movieData.results);
+            //console.log(movieData.results);
 
             var _movieListItems = "";
             var _addRows = "";
@@ -39,7 +39,7 @@ $(document).ready(function() {
 
                     _movieListItems += '<div class="movie w3-quarter">';
                     _movieListItems += '<div class="movie-card">';
-                    _movieListItems += '<img class="movie-images w3-padding" style="width:100%" src="' + _imagePath + 'w185/' + posterPath + '">';
+                    _movieListItems += '<img id="movie-img" class="movie-images w3-padding" style="width:100%" src="' + _imagePath + 'w185/' + posterPath + '">';
                     // _movieListItems += '<div class="w3-container cards">';
                     // _movieListItems += '<div class="movie-title"><h4><b>' + _title + '</b></h4></div>';
                     // _movieListItems += '<div class="movie-description"><p>'+ _description + '</p></div>';
@@ -57,8 +57,6 @@ $(document).ready(function() {
                             $("#image-row" + _rowCnt).append(_aHoldHTML[b]);
                         }
 
-                        //console.log(_aHoldHTML.length + " | " + _count + " | " + _rowCnt);
-
                         _count = 0; // reset
                         _rowCnt++;
                         _aHoldHTML.length = 0; // Clear array
@@ -71,14 +69,17 @@ $(document).ready(function() {
 
             }
 
-            //$('#now-playing-wrapper').html(movieHTML);
-
-            console.log(_aHoldHTML);
-
+            var _allMovieImages = $('.movie-images img');
+            for (var i=0; i < _allMovieImages.length; i++) {
+                console.log(_allMovieImages.attr(src));
+            }
+            
         });
 
         event.preventDefault();
     });
+    
+    
 
 });
 

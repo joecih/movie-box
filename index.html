@@ -5,6 +5,7 @@
     <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>-->
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/w3-schema.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Demo Titles</title>
     <meta charset="utf-8">
@@ -15,35 +16,30 @@
 <body>
 
     <div class="container">
-        <div class="w3-row">
-            <div class="w3-top w3-indigo">
-                <div class="">
-                    <h1 class="w3-text-shadow">Movie-Box</h1>
+        <div class="w3-top w3-ana-aircraft-cream w3-bottombar">
+            <div class="w3-row">
+                <div class="w3-col">
+                    <h1 class="w3-text-shadow w3-animate-opacity">Movie-Box</h1>
                 </div>
+            </div>
+            <div class="w3-row-padding">
                 <form id="movie-search-form" class="w3-center w3-container" role="search">
-                    <div class="w3-half">
+                    <div class="search-bar">
                         <input type="text" id="movieInput" class="w3-input w3-round" style="width:100%" placeholder="eg. Star Wars " onclick="if(this.value != '') { this.value = ''}">
-                    </div>
-                    <div class="w3-quarter">
-                        <button type="submit" class="w3-btn w3-blue w3-border w3-round-xlarge">Search</button>
-                    </div>
-                    <div class="w3-quarter">
-                        <select class="w3-select" name="option">
-                            <option value="">Here is an option</option>
-                            <option value="">Here is an option</option>
-                            <option value="">Here is an option</option>
-                            <option value="">Here is an option</option>
-                            <option value="">Here is an option</option>
-                            <!--
-                                
-                                all, movie, tv, person/actor, ??
-                            -->
+                        <select class="w3-select selections" name="option">
+                            <option value="">Movie</option>
+                            <option value="">T.V.</option>
+                            <option value="">Actor</option>
+                            <option value="">Genre</option>
+                            <option value="">All</option>
                         </select>
+                    </div>
+                    <div class="">
+                        <button type="submit" id="search-btn" class="w3-btn w3-blue w3-border w3-round-xlarge">Search</button>
                     </div>
                 </form>
             </div>
         </div>
-
         <div id="now-playing-wrapper" class="movie-content w3-center">
 
         </div>
