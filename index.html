@@ -10,36 +10,47 @@
     <title>Demo Titles</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <!--<script type="text/html" id="template">
+        <img data-src="authorPicture" data-alt="author" data-link-wrap="authorPicture" />
+        <div class="post-container">
+            <div data-content="author"></div>
+            <div data-content="date"></div>
+            <div data-content="post" data-format="sameCaseFormatter" data-format-template="upper"></div>
+        </div>
+    </script>-->
 </head>
 
 <body>
 
-    <div class="container">
-        <div class="w3-top w3-ana-aircraft-cream w3-bottombar">
-            <div class="w3-row">
-                <div class="w3-col">
-                    <h1 class="w3-text-shadow w3-animate-opacity">Movie-Box</h1>
-                </div>
+    <div class="w3-top w3-ana-aircraft-cream w3-bottombar nav-bar">
+        <div class="w3-row header-bar">
+            <div class="w3-col">
+                <h1 class="w3-text-shadow w3-animate-opacity">Movie-Box</h1>
             </div>
-            <div class="w3-row-padding">
-                <form id="movie-search-form" class="w3-center w3-container" role="search">
-                    <div class="search-bar">
-                        <input type="text" id="movieInput" class="w3-input w3-round" style="width:100%" placeholder="eg. Star Wars " onclick="if(this.value != '') { this.value = ''}">
-                        <select class="w3-select selections" name="option">
-                            <option value="">Movie</option>
-                            <option value="">T.V.</option>
-                            <option value="">Actor</option>
-                            <option value="">Genre</option>
-                            <option value="">All</option>
-                        </select>
-                    </div>
-                    <div class="">
-                        <button type="submit" id="search-btn" class="w3-btn w3-blue w3-border w3-round-xlarge">Search</button>
+        </div>
+        <div class="w3-row-padding search-bar" style="">
+            <div class="w3-container w3-twothird">
+                <form id="movie-search-form" class="" role="search">
+                    <div class="movie-input">
+                        <input type="text" id="movieInput" class="w3-input w3-round typeahead" placeholder="eg. Star Wars " onclick="if(this.value != '') { this.value = ''}">
+                        <div class="selections">
+                            <select id="optionSelector" class="w3-select selections" name="option">
+                                <option value="movie">Movie</option>
+                                <option value="tv">T.V.</option>
+                                <option value="actor">Actor</option>
+                                <option value="genre">Genre</option>
+                                <option value="all">All</option>
+                            </select>
+                        </div>
                     </div>
                 </form>
             </div>
+            <div class="search-button w3-container w3-quarter">
+                <button type="submit" id="search-btn" class="w3-btn-block w3-blue w3-border w3-large w3-text-shadow">Search</button>
+            </div>
         </div>
+    </div>
+    <div class="w3-container">
         <div id="now-playing-wrapper" class="movie-content w3-center">
 
         </div>
@@ -49,9 +60,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
     <script src="//cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/typeahead/typeahead.bundle.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+    <script src="vendors/jquery-templating/jquery.loadTemplate-1.5.6.min.js"></script>
+
+
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>-->
+
+
     <script src="js/scripts.js"></script>
 </body>
 

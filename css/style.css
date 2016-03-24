@@ -7,8 +7,6 @@ html, body {
 
 /* line 6, ../compass/sass/style.scss */
 .container {
-  width: 100%;
-  height: 99%;
   overflow: hidden;
 }
 
@@ -36,10 +34,10 @@ h4 {
 /* line 25, ../compass/sass/style.scss */
 .movie-content {
   padding-top: 200px;
-  width: 100%;
+  width: 102%;
   height: 100%;
   overflow: auto;
-  padding-right: -5px;
+  padding-right: 10px;
 }
 
 /* line 32, ../compass/sass/style.scss */
@@ -47,32 +45,26 @@ h4 {
   height: 60px;
 }
 
-/* line 36, ../compass/sass/style.scss */
+/* line 35, ../compass/sass/style.scss */
 .movie-images {
   box-shadow: 1px 1px 6px black;
 }
 
-/* line 39, ../compass/sass/style.scss */
-.w3-padding {
-  padding: 2px !important;
-}
-
-/* line 42, ../compass/sass/style.scss */
-.search-bar {
-  position: relative;
-  padding: 10px;
-}
-
 /* line 46, ../compass/sass/style.scss */
+.movie-input {
+  position: relative;
+}
+
+/* line 51, ../compass/sass/style.scss */
 .selections {
   position: absolute;
-  top: 30%;
+  top: 14%;
   right: 2%;
   width: 100px;
   box-shadow: 1px 1px 5px black;
 }
 
-/* line 53, ../compass/sass/style.scss */
-#search-btn {
-  min-width: 120px;
+/* line 59, ../compass/sass/style.scss */
+.nav-bar {
+  text-align: center;
 }

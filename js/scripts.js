@@ -1,5 +1,22 @@
 $(document).ready(function() {
-    
+
+    var _gOPTION = ""; // TODO: encapsulate this global
+
+    $('#optionSelector').change(function() {
+        _gOPTION = $('#optionSelector option:selected').attr('value');
+        console.log(_gOPTION);
+    });
+
+    $("#movieInput").keyup(function() {
+        var _searchValue = $('#movieInput').val();
+
+    });
+
+
+    /* NOTES;
+        Genre url: baseurl + /genre/move/list + api_key
+    */
+
     $('#movie-search-form').submit(function() {
 
         var movieSearchTerm = $('#movieInput').val();
@@ -9,9 +26,29 @@ $(document).ready(function() {
         var _nowPlaying = _baseURL + 'movie/now_playing' + _apiKey;
         var _imagePath;
 
+
+        // NEW STUFF !!! 
+        var _userSearch = $('#movieInput').val();
+        var _optionFilter = $('#optionSelector').val();
+        console.log(_userSearch);
+        console.log(_optionFilter.length);
+
+        if (_gOPTION === 'movie') {
+
+        } else if (_gOPTION === 'tv') {
+
+        } else if (_gOPTION === 'actor') {
+
+        } else if (_gOPTION === 'genre') {
+
+        } else if (_gOPTION === 'all') {
+
+        }
+
+
         // var searchURL =
         // 	'http://api.themoviedb.org/3/search/movie/now_playing?query='+movieSearchTerm+'&api_key=24f6a4a3dd56153bb0f7f696f167fc5b';
-        
+
         $.getJSON(_configureURL, function(_configData) {
             //console.log(_configData);
             _imagePath = _configData.images.base_url;
@@ -28,12 +65,12 @@ $(document).ready(function() {
 
 
             for (i = 0; i < movieData.results.length; i++) {
-                var title = movieData.results[i].title;
-                var overview = movieData.results[i].overview;
+                //var title = movieData.results[i].title;
+                //var overview = movieData.results[i].overview;
                 var posterPath = movieData.results[i].poster_path;
-                var releaseDate = movieData.results[i].release_date;
-                var _title = movieData.results[i].original_title;
-                var _description = movieData.results[i].overview;
+                //var releaseDate = movieData.results[i].release_date;
+                //var _title = movieData.results[i].original_title;
+                //var _description = movieData.results[i].overview;
 
                 if (posterPath != null) {
 
@@ -53,7 +90,7 @@ $(document).ready(function() {
 
                         $('#now-playing-wrapper').append('<div class="w3-row-padding w3-margin-top" id="image-row' + _rowCnt + '"></div>');
 
-                        for (b=0; b < _aHoldHTML.length; b++) {
+                        for (b = 0; b < _aHoldHTML.length; b++) {
                             $("#image-row" + _rowCnt).append(_aHoldHTML[b]);
                         }
 
@@ -61,7 +98,7 @@ $(document).ready(function() {
                         _rowCnt++;
                         _aHoldHTML.length = 0; // Clear array
                     }
-                    
+
                     _aHoldHTML.push(_movieListItems); // push 4 items to hold array
                     _movieListItems = ""; // Reset the html template
                     _count++;
@@ -70,16 +107,26 @@ $(document).ready(function() {
             }
 
             var _allMovieImages = $('.movie-images img');
-            for (var i=0; i < _allMovieImages.length; i++) {
+            for (var i = 0; i < _allMovieImages.length; i++) {
                 console.log(_allMovieImages.attr(src));
             }
-            
+
         });
 
         event.preventDefault();
     });
-    
-    
+
+    function updateContentListing() {
+
+    }
+
+    // $("#template-container").loadTemplate("js/templates/template1.html", {
+    //     author: 'Joe Bloggs',
+    //     date: '25th May 2013',
+    //     authorPicture: '',
+    //     post: 'This is the contents of my post'
+    // });
+
 
 });
 
