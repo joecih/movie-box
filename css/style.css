@@ -2,12 +2,13 @@
 html, body {
   margin: 0;
   height: 99%;
-  overflow: hidden;
+  overflow: auto;
+  
 }
 
 /* line 6, ../compass/sass/style.scss */
-.container {
-  overflow: hidden;
+.w3-container {
+  
 }
 
 /* line 12, ../compass/sass/style.scss */
@@ -34,10 +35,10 @@ h4 {
 /* line 25, ../compass/sass/style.scss */
 .movie-content {
   padding-top: 200px;
-  width: 102%;
+  width: 100%;
   height: 100%;
   overflow: auto;
-  padding-right: 10px;
+  -ms-overflow-style: none;
 }
 
 /* line 32, ../compass/sass/style.scss */

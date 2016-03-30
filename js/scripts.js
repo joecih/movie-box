@@ -126,6 +126,10 @@ $(document).ready(function() {
     //     authorPicture: '',
     //     post: 'This is the contents of my post'
     // });
+    
+    $(function() {
+       $('.tlt').textillate({ in: { effect: 'rollIn' } });
+    });
 
 
 });
